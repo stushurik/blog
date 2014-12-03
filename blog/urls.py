@@ -5,6 +5,7 @@ from django.contrib import admin
 
 urlpatterns = patterns(
     '',
+    url(r'^$', "blog.views.index", name='index'),
 
     url(r'^post/', include('post.urls')),
 
