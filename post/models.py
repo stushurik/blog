@@ -19,7 +19,6 @@ class Post(models.Model):
     def __str__(self):
 
         value = encoding.smart_unicode(self.title)
-
         return encoding.smart_unicode(unidecode.unidecode(value))
 
     def save(self, force_insert=False, force_update=False, using=None,
@@ -32,10 +31,6 @@ class Post(models.Model):
         if not self.slug:
 
             value = encoding.smart_unicode(self.title)
-
-            print value
-            print encoding.smart_unicode(unidecode.unidecode(value))
-
             self.slug = slugify(unicode(encoding.smart_unicode(unidecode.unidecode(value))))
 
         return super(Post, self).save(force_insert=False, force_update=False, using=None,
