@@ -2,3 +2,4 @@ django
 pillow
 sorl-thumbnail==11.12.1b
 unidecode
+django-social-auth

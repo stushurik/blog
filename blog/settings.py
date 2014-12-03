@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'sorl.thumbnail',
+    'social_auth',
 
     'post'
 )
