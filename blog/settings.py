@@ -104,6 +104,8 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+
 VK_APP_ID = '4662639'
 VK_API_SECRET = 'ELJXbUIBwgo3kNahnKLp'
 
