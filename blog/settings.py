@@ -94,4 +94,14 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'), )
 
 THUMBNAIL_DEBUG = True
 
-# THUMBNAIL_PREFIX = 'media/'
+AUTHENTICATION_BACKENDS = (
+    'social_auth.backends.facebook.FacebookBackend',
+    'social_auth.backends.google.GoogleOAuthBackend',
+    'social_auth.backends.google.GoogleOAuth2Backend',
+    'social_auth.backends.google.GoogleBackend',
+    'social_auth.backends.contrib.vk.VKOAuth2Backend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+VK_APP_ID = '4662639'
+VK_API_SECRET = 'ELJXbUIBwgo3kNahnKLp'

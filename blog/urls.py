@@ -12,6 +12,6 @@ urlpatterns = patterns(
 
     url(r'^accounts/login/$', 'django.contrib.auth.views.login', {'template_name': 'auth/login.html'}),
 
-    # url(r'', include('social_auth.urls')),
+    url(r'', include('social_auth.urls')),
 
 ) + static(prefix=settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
